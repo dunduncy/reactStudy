@@ -4,9 +4,9 @@ import './index.css';
 import {RouterProvider} from 'react-router-dom'
 import {sum} from '@/test'
 import router from '@/router';
-const total = sum(1,2)
-console.log(total)
 
+// 导入定制主体文件
+import '@/theme.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
