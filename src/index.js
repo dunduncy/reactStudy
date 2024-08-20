@@ -7,7 +7,7 @@ const total = sum(1,2)
 console.log(total)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App />
+	<App />
 );
 
 // If you want to start measuring performance in your app, pass a function
