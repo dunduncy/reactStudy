@@ -1,6 +1,6 @@
 import { NavBar, DatePicker } from 'antd-mobile'
 import './index.scss'
-import { useMemo, useState } from 'react'
+import { useMemo, useState,useEffect } from 'react'
 import classNames from 'classnames'
 import dayjs from 'dayjs'
 import { useSelector } from 'react-redux'
@@ -34,13 +34,23 @@ const Month = () => {
       total:pay+income
     }
   },[currentMonthList])
+
+  // 初始化的时候把当前月的统计数据显示出来
+  useEffect(()=>{
+    const nowDate = dayjs().format('YYYY-MM')
+    if(monthGroup[nowDate]){
+      setMonthList(monthGroup[nowDate])
+    }
+  },[monthGroup])
   // 确认回调
   const onConfirm = (date)=>{
     setDateVisible(false)
     // 其他逻辑
     const formatDate = dayjs(date).format('YYYY-MM')
     setCurrentDate(formatDate);
-    setMonthList(monthGroup[formatDate])
+    if(monthGroup[formatDate]){
+      setMonthList(monthGroup[formatDate])
+    }
   }
   return (
     <div className="monthlyBill">
