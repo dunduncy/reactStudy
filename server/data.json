@@ -90,6 +90,20 @@
       "date": "2024-08-22T11:56:34.344Z",
       "useFor": "drinks",
       "id": 20
+    },
+    {
+      "type": "pay",
+      "money": -50,
+      "date": "2024-08-19T16:00:00.000Z",
+      "useFor": "food",
+      "id": 21
+    },
+    {
+      "type": "income",
+      "money": 10000,
+      "date": "2024-08-18T16:00:00.000Z",
+      "useFor": "salary",
+      "id": 22
     }
   ]
 }
